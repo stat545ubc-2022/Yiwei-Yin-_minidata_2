@@ -209,9 +209,9 @@ Pick a research question, and pick a variable of interest (we'll call it "Y") th
 
 <!-------------------------- Start your work below ---------------------------->
 
-**Research Question**: FILL_THIS_IN
+**Research Question**: What's the relationship between year of built and the number of units
 
-**Variable of interest**: FILL_THIS_IN
+**Variable of interest**: number of units
 
 <!----------------------------------------------------------------------------->
 
@@ -226,7 +226,10 @@ Fit a model or run a hypothesis test that provides insight on this variable with
     -   You could use `lm()` to test for significance of regression.
 
 <!-------------------------- Start your work below ---------------------------->
-
+```{r}
+apt_units<-lm(year_registered ~no_of_units, data=apt_buildings)
+apt_units
+```
 <!----------------------------------------------------------------------------->
 
 ## 2.2 (5 points)
