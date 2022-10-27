@@ -262,11 +262,15 @@ Take a summary table that you made from Milestone 1 (Task 4.2), and write it as 
 
 <!-------------------------- Start your work below ---------------------------->
 ```{r}
-storey_variable <- cut(apt_buildings$no_of_storeys,
+apt_storeys<-apt_buildings %>% select(id,no_of_storeys)
+apt_storeys$storey_variable <- cut(apt_storeys$no_of_storeys,
                       breaks=c(-Inf,4, 7, Inf),
                        labels=c('Low', 'Medium', 'high'))
-apt_buildings_storeys$storeys_height<-factor(storey_variable)
-head(apt_buildings_storeys)
+apt_storeys
+
+here::here()
+dir.create(here::here("result1"))
+write_csv(apt_storeys, here::here("result1", "storyes review.csv"))
 ```
 <!----------------------------------------------------------------------------->
 
