@@ -85,6 +85,12 @@ If your data is untidy, then tidy it! Then, untidy it back to it's original stat
 Be sure to explain your reasoning for this task. Show us the "before" and "after".
 
 <!--------------------------- Start your work below --------------------------->
+**untidy**
+```{r}
+apt_building_untidy<-apt_buildingnew %>%
+  pivot_wider(names_from = heating_type,values_from = year_built)
+head(apt_building_untidy)
+```
 
 <!----------------------------------------------------------------------------->
 
