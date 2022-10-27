@@ -198,6 +198,7 @@ geom_point(size=1)+
  geom_line()+ylim(0,1000)+labs(color= "visitor parking type")
 graph1 
 ```
+I put paid and free together,as group them toghter reflect the apartments that would have at least one type of visitor parking.
 <!----------------------------------------------------------------------------->
 
 # Task 3: Modelling
