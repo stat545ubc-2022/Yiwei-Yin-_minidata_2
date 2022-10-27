@@ -44,10 +44,7 @@ By the end of this milestone, you should:
 # Setup
 
 Begin by loading your data and the tidyverse package below:
-```{r}
 
-```
-  
   ```{r, message = FALSE}
 library(datateachr) # <- might contain the data you picked!
 library(tidyverse)
@@ -71,7 +68,8 @@ Based on the definition above, can you identify if your data is tidy or untidy? 
 
 <!--------------------------- Start your work below --------------------------->
 ```{r}
-
+head(apt_buildings)
+apt_building1
 ```
 
 <!----------------------------------------------------------------------------->
