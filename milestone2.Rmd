@@ -241,7 +241,12 @@ Produce something relevant from your fitted model: either predictions on Y, or a
 -   Obtain your results using the `broom` package if possible. If your model is not compatible with the broom function you're needing, then you can obtain your results by some other means, but first indicate which broom function is not compatible.
 
 <!-------------------------- Start your work below ---------------------------->
-
+```{r}
+library(broom)
+tidy(apt_units)
+augment(apt_units)
+```
+I would like to use tidy to construct a tibble that summarizee the model's statistic findings, this includes the standard errors and p-valus.I would like also use the augument function to see the original data with information fro the model.
 <!----------------------------------------------------------------------------->
 
 # Task 4: Reading and writing data
