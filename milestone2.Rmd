@@ -2,7 +2,9 @@
 title: "Milestone2"
 author: "YY"
 date: "2022-10-27"
-output: html_document
+output:
+  html_document:
+    df_print: paged
 ---
 ---
   title: "Mini Data Analysis Milestone 2"
@@ -44,11 +46,11 @@ By the end of this milestone, you should:
 # Setup
 
 Begin by loading your data and the tidyverse package below:
-
-  ```{r, message = FALSE}
+```{r}
 library(datateachr) # <- might contain the data you picked!
 library(tidyverse)
 ```
+
 
 # Task 1: Tidy your data (15 points)
 
