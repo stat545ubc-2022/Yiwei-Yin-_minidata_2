@@ -73,7 +73,7 @@ apt_buildingnew<-apt_buildings %>%
   select(id, balconies,no_of_units,no_of_storeys,year_built,cooling_room,ward,no_of_storeys)
 head(apt_buildingnew)
 ```
-
+I select 8 variables which are id, balconies, no_of_units, no_of_storeys, year_built, cooling_room, ward, no_of_storeys. The data is tidy, because each row is an observation, each column is a variable, and each cell is a value. 
 <!----------------------------------------------------------------------------->
 
 ### 2.2 (5 points)
