@@ -111,24 +111,27 @@ Now, you should be more familiar with your data, and also have made progress in 
 
 <!-------------------------- Start your work below ---------------------------->
 
-1.  *Among different property type, do The apartments with visitor parking in general has more number of accessible parking?*
-2.  *Among different property type, do the apartments with more units tend to have more storeys*
+1.  *After 1990，in each  property type, do The apartments with more no_barrier_free_accessible_units tend to have more number of accessible parking?*
+2.  *After 1990， in each property type, do the apartments with more units tend to have more storeys*
 
 <!----------------------------------------------------------------------------->
 
 Explain your decision for choosing the above two research questions.
 
 <!--------------------------- Start your work below --------------------------->
-There may be certain relationship that exists for having visitor parking and the number of accessible parking as well as the number of units and storeys. However, property type may change this relationship. This relationship is important for urban planning. 
+There may be certain relationship that exists for having no_barrier_free_accessible_units and the number of accessible parking as well as the number of units and storeys. It can help us to understand the situation of accessible facilities and the apartment trends in city However,property type may impact the relationship, so I want to look at the relationship in each property type. This relationship is important for urban planning. And I want to look into the newer data as the house built after not included 1989.
 <!----------------------------------------------------------------------------->
 
 Now, try to choose a version of your data that you think will be appropriate to answer these 2 questions. Use between 4 and 8 functions that we've covered so far (i.e. by filtering, cleaning, tidy'ing, dropping irrelevant columns, etc.).
 
 <!--------------------------- Start your work below --------------------------->
 ```{r}
-apt_buildinganalysis<-apt_buildings%>%
-  select(id,property_type,visitor_parking,no_of_accessible_parking_spaces,no_of_units,no_of_storeys)
-apt_buildinganalysis
+apt_building1<-apt_buildings %>%
+  filter(year_built > 1989) %>%
+  select(id,property_type,no_barrier_free_accessible_units,no_of_accessible_parking_spaces,no_of_storeys,no_of_units)%>% 
+ arrange(property_type)%>%
+ group_by(property_type)
+head(apt_building1)
 
 ```
 <!----------------------------------------------------------------------------->
