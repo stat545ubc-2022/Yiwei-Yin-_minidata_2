@@ -244,6 +244,7 @@ Produce something relevant from your fitted model: either predictions on Y, or a
 ```{r}
 library(broom)
 apt_units_tidy<-tidy(apt_units)
+apt_units_tidy
 augment(apt_units)
 ```
 I would like to use tidy to construct a tibble that summarizee the model's statistic findings, this includes the standard errors and p-valus.I would like also use the augument function to see the original data with information fro the model.
