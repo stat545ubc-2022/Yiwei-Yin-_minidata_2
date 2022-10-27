@@ -261,7 +261,13 @@ Take a summary table that you made from Milestone 1 (Task 4.2), and write it as 
 -   **Reproducibility criteria**: You should be able to delete the csv file, and remake it simply by knitting this Rmd file.
 
 <!-------------------------- Start your work below ---------------------------->
-
+```{r}
+storey_variable <- cut(apt_buildings$no_of_storeys,
+                      breaks=c(-Inf,4, 7, Inf),
+                       labels=c('Low', 'Medium', 'high'))
+apt_buildings_storeys$storeys_height<-factor(storey_variable)
+head(apt_buildings_storeys)
+```
 <!----------------------------------------------------------------------------->
 
 ## 3.2 (5 points)
