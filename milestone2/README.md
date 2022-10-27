@@ -1,2 +1,2 @@
 # Yiwei-Yin-_minidata_2
-For minidata _2 analysis
+This folder contains the source for Milestone 1
