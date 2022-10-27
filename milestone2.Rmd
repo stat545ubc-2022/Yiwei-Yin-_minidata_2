@@ -191,9 +191,7 @@ The reason I took the this order is that I would like the reader to find the gra
 <!-------------------------- Start your work below ---------------------------->
 
 **Task Number**: 2
-```{r}
 
-```
 
 
 <!----------------------------------------------------------------------------->
