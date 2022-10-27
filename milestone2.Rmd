@@ -112,21 +112,23 @@ Now, you should be more familiar with your data, and also have made progress in 
 
 <!-------------------------- Start your work below ---------------------------->
 
-1.  *Do The apartments with visitor parking in general has more number of accessible parking?*
-2.  *Among different property type, do the apartment with more units tend to have more storeys*
+1.  *Among different property type, do The apartments with visitor parking in general has more number of accessible parking?*
+2.  *Among different property type, do the apartments with more units tend to have more storeys*
 
 <!----------------------------------------------------------------------------->
 
 Explain your decision for choosing the above two research questions.
 
 <!--------------------------- Start your work below --------------------------->
-1.  Research question 1:it helps us to understand the relationship between visitor parking and accessible parking.
-2.  Research question 2:it help us to understand the relationship between units and storeys in different types of property
+There may be certain relationship that exists for visitor parking and accessible parking as well as units and storeys. However, property type may change this relationship. This relationship is important for urban planning. 
 <!----------------------------------------------------------------------------->
 
 Now, try to choose a version of your data that you think will be appropriate to answer these 2 questions. Use between 4 and 8 functions that we've covered so far (i.e. by filtering, cleaning, tidy'ing, dropping irrelevant columns, etc.).
 
 <!--------------------------- Start your work below --------------------------->
+```{r}
+
+```
 
 <!----------------------------------------------------------------------------->
 
