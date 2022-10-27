@@ -243,7 +243,7 @@ Produce something relevant from your fitted model: either predictions on Y, or a
 <!-------------------------- Start your work below ---------------------------->
 ```{r}
 library(broom)
-tidy(apt_units)
+apt_units_tidy<-tidy(apt_units)
 augment(apt_units)
 ```
 I would like to use tidy to construct a tibble that summarizee the model's statistic findings, this includes the standard errors and p-valus.I would like also use the augument function to see the original data with information fro the model.
@@ -281,6 +281,9 @@ Write your model object from Task 3 to an R binary file (an RDS), and load it ag
 -   The same robustness and reproducibility criteria as in 3.1 apply here.
 
 <!-------------------------- Start your work below ---------------------------->
+```{r}
+saveRDS()
+```
 
 <!----------------------------------------------------------------------------->
 
