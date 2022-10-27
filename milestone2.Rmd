@@ -191,9 +191,13 @@ The reason I took the this order is that I would like the reader to find the gra
 <!-------------------------- Start your work below ---------------------------->
 
 **Task Number**: 2
-
-
-
+```{r}
+graph1<-apt_buildings %>% 
+ggplot(aes(x=no_of_storeys,y=no_of_units,color=fct_other(visitor_parking,drop  = c( "PAID","FREE")))) +
+geom_point(size=1)+
+ geom_line()+ylim(0,1000)+labs(color= "visitor parking type")
+graph1 
+```
 <!----------------------------------------------------------------------------->
 
 # Task 3: Modelling
