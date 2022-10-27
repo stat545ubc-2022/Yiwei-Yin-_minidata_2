@@ -1,2 +1,3 @@
 # Yiwei-Yin-_minidata_2
-For minidata _2 analysis
+This repository is for mini data analysis 2 based on apt_buildings database
+This repository continain data analysis for apt_buildings, including tidy the data and performing statistic analysis
