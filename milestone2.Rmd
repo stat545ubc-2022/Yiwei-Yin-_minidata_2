@@ -68,7 +68,6 @@ Based on the definition above, can you identify if your data is tidy or untidy? 
 
 <!--------------------------- Start your work below --------------------------->
 ```{r}
-apt_buildings
 head(apt_buildings)
 apt_buildingnew<-apt_buildings %>% 
   select(id,rsn,property_type,exterior_fire_escape,year_built,cooling_room,ward,no_of_storeys)
@@ -120,18 +119,22 @@ Now, you should be more familiar with your data, and also have made progress in 
 Explain your decision for choosing the above two research questions.
 
 <!--------------------------- Start your work below --------------------------->
-There may be certain relationship that exists for visitor parking and accessible parking as well as units and storeys. However, property type may change this relationship. This relationship is important for urban planning. 
+There may be certain relationship that exists for having visitor parking and the number of accessible parking as well as the number of units and storeys. However, property type may change this relationship. This relationship is important for urban planning. 
 <!----------------------------------------------------------------------------->
 
 Now, try to choose a version of your data that you think will be appropriate to answer these 2 questions. Use between 4 and 8 functions that we've covered so far (i.e. by filtering, cleaning, tidy'ing, dropping irrelevant columns, etc.).
 
 <!--------------------------- Start your work below --------------------------->
 ```{r}
+apt_buildinganalysis<-apt_buildings%>%
+  select(id,property_type,visitor_parking,no_of_accessible_parking_spaces,no_of_units,no_of_storeys)
+apt_buildinganalysis
 
 ```
-
 <!----------------------------------------------------------------------------->
 
+  
+  
 # Task 2: Special Data Types (10)
 
 For this exercise, you'll be choosing two of the three tasks below -- both tasks that you choose are worth 5 points each.
