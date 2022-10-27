@@ -270,8 +270,8 @@ apt_storeys$storey_variable <- cut(apt_storeys$no_of_storeys,
 apt_storeys
 
 here::here()
-dir.create(here::here("result1"))
-write_csv(apt_storeys, here::here("result1", "storyes review.csv"))
+dir.create(here::here("output"))
+write_csv(apt_storeys, here::here("output", "storyes review.csv"))
 ```
 <!----------------------------------------------------------------------------->
 
@@ -283,7 +283,9 @@ Write your model object from Task 3 to an R binary file (an RDS), and load it ag
 
 <!-------------------------- Start your work below ---------------------------->
 ```{r}
-saveRDS()
+saveRDS(apt_units_tidy, here::here("output","mini_project_2_apt_units.rds"))
+apt_units_test<-readRDS(here::here("output","mini_project_2_apt_units.rds"))
+apt_units_test
 ```
 
 <!----------------------------------------------------------------------------->
