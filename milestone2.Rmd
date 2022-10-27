@@ -68,12 +68,13 @@ Based on the definition above, can you identify if your data is tidy or untidy? 
 
 <!--------------------------- Start your work below --------------------------->
 ```{r}
+apt_buildings
 head(apt_buildings)
 apt_buildingnew<-apt_buildings %>% 
-  select(id,heating_type,no_of_units,no_of_storeys,year_built,cooling_room,ward,no_of_storeys)
+  select(id,rsn,property_type,exterior_fire_escape,year_built,cooling_room,ward,no_of_storeys)
 head(apt_buildingnew)
 ```
-I select 8 variables which are id,heating_type, no_of_units, no_of_storeys, year_built, cooling_room, ward, no_of_storeys. The data is tidy, because each row is an observation, each column is a variable, and each cell is a value. 
+I select 8 variables which are id, rsn, property_type, exterior_fire_escape, year_built, cooling_room, ward,no_of_storeys The data is tidy, because each row is an observation, each column is a variable, and each cell is a value. 
 <!----------------------------------------------------------------------------->
 
 ### 2.2 (5 points)
@@ -88,8 +89,18 @@ Be sure to explain your reasoning for this task. Show us the "before" and "after
 **untidy**
 ```{r}
 apt_building_untidy<-apt_buildingnew %>%
-  pivot_wider(names_from = heating_type,values_from = year_built)
+  pivot_wider(names_from = property_type,values_from =rsn)
 head(apt_building_untidy)
+```
+**re-tidy**
+```{r}
+apt_building_retidy<-apt_building_untidy %>% group_by(id)%>%
+ pivot_longer(cols = c("PRIVATE","TCHC","SOCIAL HOUSING"),
+               names_to = "property_type",
+               values_to = "rsn",
+              values_drop_na = T) 
+  head(apt_building_retidy)
+
 ```
 
 <!----------------------------------------------------------------------------->
