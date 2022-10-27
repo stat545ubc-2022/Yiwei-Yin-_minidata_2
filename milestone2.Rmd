@@ -102,7 +102,7 @@ apt_building_retidy<-apt_building_untidy %>% group_by(id)%>%
   head(apt_building_retidy)
 
 ```
-
+I untidy the data by showing the different property type and its related rsn number, then I use pivot_longer function to tidy the dataset to its original format
 <!----------------------------------------------------------------------------->
 
 ### 2.3 (7.5 points)
